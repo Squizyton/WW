@@ -41,6 +41,7 @@ public class Combat : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Keypad5))
         {
             Instantiate(fireball, firePoint.position, firePoint.rotation);
+
         }
 
 

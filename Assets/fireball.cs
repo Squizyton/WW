@@ -5,6 +5,9 @@ using UnityEngine;
 public class fireball : MonoBehaviour {
 
     public float speed;
+    public GameObject explosion;
+    public Transform Fireball;
+
 
 	// Use this for initialization
 	void Start () {
@@ -22,6 +25,16 @@ public class fireball : MonoBehaviour {
    void OnTriggerEnter2D(Collider2D collision)
     {
         Destroy(gameObject);
+
+        Instantiate(explosion, Fireball.position, Fireball.rotation);
+
+        Destroy(explosion.gameObject);
+
+
+
     }
+
+
+
 
 }
