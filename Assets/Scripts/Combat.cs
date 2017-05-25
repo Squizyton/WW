@@ -10,12 +10,15 @@ public class Combat : MonoBehaviour {
     public const int Stunned = 2;
     public const int state = Canfight;
 
+
+    public const int No_Character = 0;
     public const int CharacterPicked_Debug = 99;
 
-    public const int WhatCharacter = 0;
+
+    public static int WhatCharacter = No_Character;
 
 
-    void Start ()
+    void Update ()
     {
         switch (WhatCharacter)
         {

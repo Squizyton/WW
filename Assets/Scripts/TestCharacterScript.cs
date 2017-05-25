@@ -9,14 +9,13 @@ public class TestCharacterScript : MonoBehaviour {
     public static float mana = 200;
 
 
-
   
 
 
     // Use this for initialization
 	void Start () {
 
-        
+        Combat.WhatCharacter = Combat.CharacterPicked_Debug;
 
 	}
 	
