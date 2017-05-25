@@ -4,9 +4,20 @@ using UnityEngine;
 
 public class TestCharacterScript : MonoBehaviour {
 
-	// Use this for initialization
+    public static float Health = 100;
+    public static float stamina = 100;
+    public static float mana = 200;
+
+
+
+  
+
+
+    // Use this for initialization
 	void Start () {
-		
+
+        
+
 	}
 	
 	// Update is called once per frame

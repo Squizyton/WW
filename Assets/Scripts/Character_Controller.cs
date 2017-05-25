@@ -16,7 +16,7 @@ public class Character_Controller : MonoBehaviour
     void Start()
     {
     
-        myBody = this.GetComponent<Rigidbody2D>();//Unity 5+
+        myBody = this.GetComponent<Rigidbody2D>();
         myTrans = this.transform;
  
     }
