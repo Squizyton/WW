@@ -36,6 +36,8 @@ public class Combat : MonoBehaviour {
 	// Update is called once per frame
 	void CharacterDebug()
     {
+        Debug.Log("We made it this far");
+
         if (Input.GetKeyDown(KeyCode.Keypad5))
         {
             Debug.Log("A fireball was shot");
