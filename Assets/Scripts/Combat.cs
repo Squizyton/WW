@@ -36,7 +36,7 @@ public class Combat : MonoBehaviour {
 	// Update is called once per frame
 	void CharacterDebug()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha5))
+        if (Input.GetKeyDown(KeyCode.Keypad4))
         {
 
             Instantiate(fireball, firePoint.position, firePoint.rotation);
