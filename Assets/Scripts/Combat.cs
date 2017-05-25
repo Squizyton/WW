@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Combat : MonoBehaviour {
 
+    public Transform firePoint;
+    public GameObject fireball;
+
+
 
     public const int Canfight = 0;
     public const int BookKnockedOut = 1;
@@ -27,12 +31,17 @@ public class Combat : MonoBehaviour {
                 break;
 
         }
-	}
+    }
 
 	// Update is called once per frame
 	void CharacterDebug()
     {
-        Debug.Log("HEY, IM HERE! :D");
+        if (Input.GetKeyDown(KeyCode.Alpha5))
+        {
+
+            Instantiate(fireball, firePoint.position, firePoint.rotation);
+
+        }
 
 
 	}
