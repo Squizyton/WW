@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterController : MonoBehaviour 
+public class Character_Controller : MonoBehaviour 
 
 {
     public float speed = 10, jumpVelocity = 10;
@@ -26,7 +26,10 @@ public class CharacterController : MonoBehaviour
 
 
         Move(Input.GetAxisRaw("Horizontal"));
-        if (Input.GetButtonDown("Space"))
+
+
+
+        if (Input.GetButtonDown("Jump"))
         {
             Jump(); 
         }
