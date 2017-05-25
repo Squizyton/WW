@@ -19,7 +19,7 @@ public class fireball : MonoBehaviour {
 
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+   void OnTriggerEnter2D(Collider2D collision)
     {
         Destroy(gameObject);
     }
