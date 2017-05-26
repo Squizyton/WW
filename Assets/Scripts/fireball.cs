@@ -6,12 +6,13 @@ public class fireball : MonoBehaviour {
 
     public float speed;
     public GameObject explosion;
+	public GameObject UISys;
     public Transform Fireball;
 
 
 	// Use this for initialization
 	void Start () {
-		
+		UISys = GameObject.FindGameObjectWithTag ("UI");
 	}
 	
 	// Update is called once per frame
@@ -24,10 +25,12 @@ public class fireball : MonoBehaviour {
 
    void OnTriggerEnter2D(Collider2D collision)
     {
-        Destroy(gameObject);
-
-        Instantiate(explosion, Fireball.position, Fireball.rotation);
-
+        
+		if (collision.gameObject.tag == "Player2") {
+			UISys.GetComponent<UI> ().SecondCurHp-=5;
+			Destroy (gameObject);
+			Instantiate (explosion, Fireball.position, Fireball.rotation);
+		}
         
 
 

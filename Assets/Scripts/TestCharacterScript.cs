@@ -4,13 +4,9 @@ using UnityEngine;
 
 public class TestCharacterScript : MonoBehaviour {
 
-	public static float P1Health = 100;
-	public static float P1Stamina = 100;
-	public static float P1Mana = 200;
-
-	public static float P2Health = 100;
-	public static float P2Stamina = 100;
-	public static float P2Mana = 200;
+	public float Health = 100;
+	public float Stamina = 100;
+	public float Mana = 200;
 
 
   
