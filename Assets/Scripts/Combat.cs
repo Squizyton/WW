@@ -5,9 +5,10 @@ using UnityEngine;
 public class Combat : MonoBehaviour {
 
     public Transform firePoint;
+    public Transform Feet;
     public GameObject fireball;
-
-
+    public GameObject Rock_Mine;
+    public GameObject GroundSpiral;   
 
     public const int Canfight = 0;
     public const int BookKnockedOut = 1;
@@ -54,6 +55,7 @@ public class Combat : MonoBehaviour {
 			}
 		}
 
+       
         if (Input.GetKeyUp(KeyCode.Keypad5) || Input.GetButtonUp("Fire1"))
         {	
 
@@ -62,13 +64,44 @@ public class Combat : MonoBehaviour {
 				UISys.GetComponent<UI> ().FirstCurMa -= 25;
 				Instantiate(fireball, firePoint.position, firePoint.rotation);
 			}
-			if (gameObject.tag == "Player2"&& UISys.GetComponent<UI>().SecondCurMa >=25) {
+
+
+
+            if (gameObject.tag == "Player2"&& UISys.GetComponent<UI>().SecondCurMa >=25) {
 				UISys.GetComponent<UI> ().SecondCurMa -= 25;
 				Instantiate(fireball, firePoint.position, firePoint.rotation);
 			}
 
         }
+   
 
 
-	}
+
+        if (Input.GetKeyUp(KeyCode.Keypad6))
+        {
+            if (gameObject.tag == "Player1" && UISys.GetComponent<UI>().FirstCurMa >= 35)
+            {
+                UISys.GetComponent<UI>().FirstCurMa -= 35;
+                Instantiate(Rock_Mine, firePoint.position, firePoint.rotation);
+
+                
+
+            }
+
+        }
+
+        if (Input.GetKeyUp(KeyCode.Keypad7))
+        {
+            if (gameObject.tag == "Player1" && UISys.GetComponent<UI>().FirstCurMa >= 5)
+            {
+                UISys.GetComponent<UI>().FirstCurMa -= 5;
+                Instantiate(GroundSpiral, Feet.position, Feet.rotation);
+
+
+
+            }
+
+        }
+
+    }
 }
