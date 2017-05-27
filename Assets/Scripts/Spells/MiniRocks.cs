@@ -11,6 +11,7 @@ public class MiniRocks : MonoBehaviour {
 
     void Start()
     {
+		UISys = GameObject.FindGameObjectWithTag ("UI");
         PlaceItIsGoing = PlacesItCanGo[Random.Range(1, 5)];
         Debug.Log("The Rock is going to" + PlaceItIsGoing);
     }

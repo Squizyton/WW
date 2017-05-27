@@ -17,7 +17,7 @@ public class Rock_Mine : MonoBehaviour {
 
 	void Update ()
     {
-        GetComponent<Rigidbody2D>().velocity = new Vector2(speed, GetComponent<Rigidbody2D>().velocity.y); 
+        GetComponent<Rigidbody2D>().velocity = new Vector3(speed,0, GetComponent<Rigidbody2D>().velocity.y); 
 	}
 
 
