@@ -95,7 +95,7 @@ public class Combat : MonoBehaviour {
             if (gameObject.tag == "Player1" && UISys.GetComponent<UI>().FirstCurMa >= 5)
             {
                 UISys.GetComponent<UI>().FirstCurMa -= 5;
-                Instantiate(GroundSpiral, Feet.position, Feet.rotation);
+				Instantiate(GroundSpiral, Feet.position, Feet.rotation);
 
 
 

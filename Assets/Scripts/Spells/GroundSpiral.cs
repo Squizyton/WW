@@ -9,7 +9,7 @@ public class GroundSpiral : MonoBehaviour {
     public Transform Player2;
 
 	void Start () {
-		
+		Player2 = GameObject.FindGameObjectWithTag ("Player2").transform;
 	}
 
      void Update()
