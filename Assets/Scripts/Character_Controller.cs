@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Character_Controller : MonoBehaviour 
+public class Character_Controller : MonoBehaviour
 
 {
     public float speed = 10, jumpVelocity = 10;
@@ -15,14 +15,14 @@ public class Character_Controller : MonoBehaviour
 
     void Start()
     {
-    
+
         myBody = this.GetComponent<Rigidbody2D>();
         myTrans = this.transform;
- 
+
     }
 
     void FixedUpdate()
-    { 
+    {
 
 
         Move(Input.GetAxisRaw("Horizontal"));
@@ -31,13 +31,13 @@ public class Character_Controller : MonoBehaviour
 
         if (Input.GetButtonDown("Jump"))
         {
-            Jump(); 
+            Jump();
         }
     }
 
     void Move(float horizonalInput)
     {
- 
+
         Vector2 moveVel = myBody.velocity;
         moveVel.x = horizonalInput * speed;
         myBody.velocity = moveVel;

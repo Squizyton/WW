@@ -8,12 +8,14 @@ public class fireball : MonoBehaviour {
     public GameObject explosion;
 	public GameObject UISys;
     public Transform Fireball;
-
+    
 
 	// Use this for initialization
 	void Start () {
 		UISys = GameObject.FindGameObjectWithTag ("UI");
-	}
+        StartCoroutine(DeathTimer());
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -37,7 +39,12 @@ public class fireball : MonoBehaviour {
 
     }
 
+    IEnumerator DeathTimer()
+    {
 
+        yield return new WaitForSeconds(2.5f);
+        Destroy(gameObject);
 
+    }
 
 }

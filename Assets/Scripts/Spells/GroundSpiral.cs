@@ -10,7 +10,9 @@ public class GroundSpiral : MonoBehaviour {
 
 	void Start () {
 		Player2 = GameObject.FindGameObjectWithTag ("Player2").transform;
-	}
+        StartCoroutine(DeathTime());
+
+    }
 
      void Update()
     {
@@ -25,6 +27,20 @@ public class GroundSpiral : MonoBehaviour {
             Player2.GetComponent<Rigidbody2D>().velocity += jumpVelocity * Vector2.up;
         }
 
+
         
+
+
     }
+
+    IEnumerator DeathTime()
+
+    {
+        yield return new WaitForSeconds(2.0f);
+        Destroy(gameObject);
+
+    }
+
+
+
 }
