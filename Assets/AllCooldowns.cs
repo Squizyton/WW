@@ -39,6 +39,7 @@ public class AllCooldowns : MonoBehaviour
     IEnumerator FireBallCoolDown()
     {
         yield return new WaitForSeconds(.25f);
+		Debug.Log ("FIRE");
         CanFireBall = true;
     }
 
