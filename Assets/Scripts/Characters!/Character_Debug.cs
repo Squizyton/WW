@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Combat : MonoBehaviour
-{
+public class Character_Debug : MonoBehaviour {
 
     public Transform firePoint;
     public Transform Feet;
@@ -22,33 +21,16 @@ public class Combat : MonoBehaviour
 
     public GameObject UISys;
 
-    public const int No_Character = 0;
-    public const int CharacterPicked_Debug = 99;
 
 
-    public static int WhatCharacter = No_Character;
-
-
-    void Start()
-    {
+    // Use this for initialization
+    void Start () {
         UISys = GameObject.FindGameObjectWithTag("UI");
     }
+	
+	// Update is called once per frame
+	void Update () {
 
-    void Update()
-    {
-        //chooses instance of character
-        switch (WhatCharacter)
-        {
-            case CharacterPicked_Debug:
-                CharacterDebug();
-                break;
-
-        }
-    }
-
-    // Update is called once per frame
-    void CharacterDebug()
-    {
         //chaotic mana regen
         if (gameObject.tag == "Player1")
         {
@@ -57,14 +39,7 @@ public class Combat : MonoBehaviour
                 UISys.GetComponent<UI>().FirstCurMa += 0.1f;
             }
         }
-        if (gameObject.tag == "Player2")
-        {
-            if (UISys.GetComponent<UI>().SecondCurMa / UISys.GetComponent<UI>().SecondPMa < 1)
-            {
-                UISys.GetComponent<UI>().SecondCurMa += 0.1f;
-            }
-        }
-
+   
 
         //CharacterDebug - FireBall
 
@@ -121,6 +96,11 @@ public class Combat : MonoBehaviour
             }
 
         }
+
+
+
+
+
 
     }
 }
