@@ -63,7 +63,7 @@ public class CharacterChooser : MonoBehaviour {
         if (HasPicked == true)
         {
 
-            SceneManager.LoadScene("Test Scene");
+            SceneManager.LoadScene("Combat Testing");
         
 
 
