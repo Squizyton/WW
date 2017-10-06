@@ -9,15 +9,16 @@ public class Character_Debug : MonoBehaviour {
     public GameObject fireball;
     public GameObject Rock_Mine;
     public GameObject GroundSpiral;
-
+    public float DamageTaken = 0;
 
     public bool CanFireBall = true;
 
 
     public const int Canfight = 0;
+    public const int Blocking = 3;
     public const int BookKnockedOut = 1;
     public const int Stunned = 2;
-    public const int state = Canfight;
+    public static int state = Canfight;
 
     public GameObject UISys;
 
@@ -31,6 +32,19 @@ public class Character_Debug : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+		switch(State)
+		{
+		
+			case 3:
+			Blocking()
+			break;
+		
+		}
+	
+		
+		void Attacking()
+		{
+		
         //chaotic mana regen
         if (gameObject.tag == "Player1")
         {
@@ -95,11 +109,26 @@ public class Character_Debug : MonoBehaviour {
                 }
             }
 
+		if(input.getkeydown(Keycode.A))
+		{
+		State = 3;
+		
+		}
+		
+		
         }
+		}
+		void Blocking()
+		{
+		if(DamageTaken > 0)
+		{
+		
+		
+		}
 
-
-
-
+		
+		}
+	
 
 
     }
